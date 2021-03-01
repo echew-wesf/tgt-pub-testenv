@@ -32,5 +32,6 @@ jobs:
           foobar: ${{ secrets.secret_one }}
         run: |
           export BOOYAH='foofoo'
-          echo "booyah: $BOOYAH"
-          echo "sec one: $foobar"
+          echo "booyah 1: $BOOYAH"
+          export BOOYAH=$foobar
+          echo "booyah 2: $BOOYAH"
