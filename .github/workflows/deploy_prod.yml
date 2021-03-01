@@ -36,6 +36,6 @@ jobs:
           export BOOYAH=$foobar
           echo "booyah 2: $BOOYAH"
           echo $foobar > ./booyah
-          export BOOYAH=$(tail-n 1 ./booyah)
+          export BOOYAH=$(tail -n 1 ./booyah)
           echo "booyah 3: $BOOYAH"
 
