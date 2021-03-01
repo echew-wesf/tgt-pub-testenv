@@ -31,4 +31,6 @@ jobs:
         env:
           foobar: ${{ secrets.secret_one }}
         run: |
+          export BOOYAH='foofoo'
+          echo "booyah: $BOOYAH"
           echo "sec one: $foobar"
