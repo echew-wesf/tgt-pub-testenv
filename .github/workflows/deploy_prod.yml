@@ -31,11 +31,9 @@ jobs:
         env:
           foobar: ${{ secrets.secret_one }}
         run: |
-          export BOOYAH='foofoo'
-          echo "booyah 1: $BOOYAH"
-          export BOOYAH=$foobar
-          echo "booyah 2: $BOOYAH"
-          echo $foobar > ./booyah
-          export BOOYAH=$(tail -n 1 ./booyah)
-          echo "booyah 3: $BOOYAH"
+          if [ $foobar == 'production' ]; then
+            echo 'production'
+          else
+            echo 'not production'
+          fi
 
